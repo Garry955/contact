@@ -18,35 +18,34 @@
 		{% endblock %}
 	</head>
 	<body>
-		<nav
-			class="navbar bg-primary">
-			<!-- Collapse button -->
-			<button class="d-md-none d-sm-block navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="text-white h3">
-					<i class="fa-sharp fa-solid fa-bars"></i>
-				</span>
-			</button>
-			<!-- Collapsible content -->
-			<div class="collapse navbar-collapse d-md-block" id="navbarContent">
-				<ul class="navbar-nav d-md-flex">
-					<li class="navbar-item active p-2">
-						<a class="text-white font-weight-bold h4" href="/">Kezdőlap
-						</a>
-					</li>
-					<li class="navbar-item p-2">
-						<a class="text-white font-weight-bold h4" href="/">Kezdőlap
-							<span class="sr-only">(current)</span>
-						</a>
-					</li>
-				</ul>
+		<nav class="navbar bg-primary">
+			<div
+				class="container">
+				<!-- Collapse button -->
+				<button class="d-md-none d-sm-block navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="text-white h3">
+						<i class="fa-sharp fa-solid fa-bars"></i>
+					</span>
+				</button>
+				<!-- Collapsible content -->
+				<div class="collapse navbar-collapse d-md-block" id="navbarContent">
+					<ul class="navbar-nav d-md-flex">
+						<li class="navbar-item active p-2">
+							<a class="text-white font-weight-bold h4" href="/">
+								<i class="fa-sharp fa-solid fa-house"></i>
+								Kezdőlap
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 		<div class="container h-100 sm-mw-100 my-5"> {% block body %}{% endblock %}
 
-		</div>
+			</div>
 			<!-- Footer -->
-			<footer class="mt-5">
-				<section class="container">
+			<footer>
+				<section class="container d-none d-md-block">
 					<div class="row text-center d-flex justify-content-end py-2">
 						<div class="col-md-2">
 							<h6 class="text-uppercase font-weight-bold text-primary">
