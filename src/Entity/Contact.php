@@ -16,18 +16,18 @@ class Contact
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    #[Assert\NotBlank]
+    #[Assert\NotBlank(message: 'A mező nem lehet üres!')]
     private ?string $name = null;
 
     #[ORM\Column(length: 255)]
-    #[Assert\NotBlank]
+    #[Assert\NotBlank(message: 'A mező nem lehet üres!')]
     #[Assert\Email(
-        message: 'The email {{ value }} is not a valid email.',
+        message: 'A megadott e-mail cím ({{ value }}) nem valós.',
     )]
     private ?string $email = null;
 
     #[ORM\Column(type: Types::TEXT)]
-    #[Assert\NotBlank]
+    #[Assert\NotBlank(message: 'A mező nem lehet üres!')]
     private ?string $text = null;
 
     public function getId(): ?int
