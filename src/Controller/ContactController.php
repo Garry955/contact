@@ -32,7 +32,7 @@ class ContactController extends AbstractController
             $this->em->persist($newContact);
             $this->em->flush();
 
-            return $this->redirectToRoute('contact');
+            return $this->render('contact/success.html.twig');
         }
 
         return $this->render('contact/index.html.twig', [
