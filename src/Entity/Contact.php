@@ -16,15 +16,18 @@ class Contact
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank]
     private ?string $name = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank]
     #[Assert\Email(
         message: 'The email {{ value }} is not a valid email.',
     )]
     private ?string $email = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank]
     private ?string $text = null;
 
     public function getId(): ?int
