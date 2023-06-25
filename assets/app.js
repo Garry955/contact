@@ -7,3 +7,14 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
+
+// Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
+const $ = require('jquery');
+import 'popper.js';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'font-awesome/css/font-awesome.css';
+
+$(document).ready(function(){
+    // Put your jquery code here.
+});

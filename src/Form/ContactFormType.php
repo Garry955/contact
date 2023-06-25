@@ -19,19 +19,22 @@ class ContactFormType extends AbstractType
                 'attr' => array(
                     'class' => '',
                     'placeholder' => 'Név',
-                )
+                ),
+                'label' => 'Név'
             ])
             ->add('email', EmailType::class, [
                 'attr' => array(
                     'class' => '',
                     'placeholder' => 'E-mail cím',
-                )
+                ),
+                'label' => 'E-mail'
             ])
             ->add('text', TextareaType::class, [
                 'attr' => array(
                     'class' => '',
                     'placeholder' => 'Üzenet szövege',
-                )
+                ),
+                'label' => 'Üzenet'
             ]);
     }
 
