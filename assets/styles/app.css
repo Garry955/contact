@@ -1,3 +1,10 @@
-body {
-    background-color: lightgray;
+form ul {
+    display: inline-block;
+}
+
+form ul li {
+    text-decoration: none;
+    display: block;
+    color: #dc3545;
+    font-weight: 700;
 }

@@ -17,21 +17,21 @@ class ContactFormType extends AbstractType
         $builder
             ->add('name', TextType::class, [
                 'attr' => array(
-                    'class' => '',
+                    'class' => 'form-control mb-2',
                     'placeholder' => 'Név',
                 ),
                 'label' => 'Név'
             ])
             ->add('email', EmailType::class, [
                 'attr' => array(
-                    'class' => '',
+                    'class' => 'form-control mb-2',
                     'placeholder' => 'E-mail cím',
                 ),
                 'label' => 'E-mail'
             ])
             ->add('text', TextareaType::class, [
                 'attr' => array(
-                    'class' => '',
+                    'class' => 'form-control mb-2',
                     'placeholder' => 'Üzenet szövege',
                 ),
                 'label' => 'Üzenet'

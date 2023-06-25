@@ -27,7 +27,7 @@ class Contact
     private ?string $email = null;
 
     #[ORM\Column(type: Types::TEXT)]
-    #[Assert\NotBlank(message: 'A mező nem lehet üres!')]
+    #[Assert\NotBlank(message: 'A mező nem lehet üres!'), ]
     private ?string $text = null;
 
     public function getId(): ?int
