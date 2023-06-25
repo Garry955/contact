@@ -1,10 +1,46 @@
 form ul {
-    display: inline-block;
+  display: block;
+  padding-left: 0;
 }
 
 form ul li {
-    text-decoration: none;
+  text-decoration: none;
+  display: block;
+  color: #dc3545;
+  font-weight: 700;
+}
+
+form label:first-of-type {
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    nav ul.navbar-nav {
+        flex-direction: row !important;
+    }
+}
+@media screen and (max-width: 768px) {
+  nav .navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    z-index: 2;
+    margin-top: 57px;
+  }
+  nav .navbar-collapse ul li {
+    flex-direction: column !important;
+  }
+  nav .navbar-collapse ul li {
     display: block;
-    color: #dc3545;
-    font-weight: 700;
+    text-align: left;
+    border-top: 1px solid #fff;
+  }
 }

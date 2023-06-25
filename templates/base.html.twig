@@ -2,10 +2,12 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>
 			{% block title %}Kezdőlap
 			{% endblock %}
 		</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
 		{% block stylesheets %}
 			{{ encore_entry_link_tags('app') }}
@@ -16,34 +18,50 @@
 		{% endblock %}
 	</head>
 	<body>
-		<div class="container h-100 pb-3">
-			<header class="d-flex justify-content-end py-3">
-				<ul class="nav nav-pills">
-					<li class="nav-item">
-						<a href="/" class="nav-link active" aria-current="page">Kezdőlap</a>
+		<nav
+			class="navbar bg-primary">
+			<!-- Collapse button -->
+			<button class="d-md-none d-sm-block navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="text-white h3">
+					<i class="fa-sharp fa-solid fa-bars"></i>
+				</span>
+			</button>
+			<!-- Collapsible content -->
+			<div class="collapse navbar-collapse d-md-block" id="navbarContent">
+				<ul class="navbar-nav d-md-flex">
+					<li class="navbar-item active p-2">
+						<a class="text-white font-weight-bold h4" href="/">Kezdőlap
+						</a>
+					</li>
+					<li class="navbar-item p-2">
+						<a class="text-white font-weight-bold h4" href="/">Kezdőlap
+							<span class="sr-only">(current)</span>
+						</a>
 					</li>
 				</ul>
-			</header>
-			{% block body %}{% endblock %}
+			</div>
+		</nav>
+		<div class="container h-100 sm-mw-100 my-5"> {% block body %}{% endblock %}
 
 		</div>
-		<!-- Footer -->
-		<footer class="container">
-			<section class="mt-1">
-				<div class="row text-center d-flex justify-content-end py-2">
-					<div class="col-md-2">
-						<h6 class="text-uppercase font-weight-bold text-primary">
-							<a href="/">Kezdőlap</a>
-						</h6>
+			<!-- Footer -->
+			<footer class="mt-5">
+				<section class="container">
+					<div class="row text-center d-flex justify-content-end py-2">
+						<div class="col-md-2">
+							<h6 class="text-uppercase font-weight-bold text-primary">
+								<a href="/">Kezdőlap</a>
+							</h6>
+						</div>
 					</div>
+				</section>
+				<!-- Copyright -->
+				<div class="text-center text-white p-3 bg-primary">
+					2023 Próbafeladat
 				</div>
-			</section>
-			<!-- Copyright -->
-			<div class="text-center text-white p-3 bg-primary">
-				2023 Próbafeladat
-			</div>
-			<!-- Copyright -->
-		</footer>
-		<!-- Footer -->
-	</body>
-</html></body></html>
+				<!-- Copyright -->
+			</footer>
+			<!-- Footer -->
+		</body>
+	</html>
+</body></html>
